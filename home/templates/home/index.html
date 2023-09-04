@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Learning!!    </title>
-</head>
-<body>
-   <h1>This is my first Django Project!</h1>
-   <p>This is my paragraph in Django</p> 
-</body>
-</html>
+{% extends "base.html" %}
+{% block start %}
+
+   <h1>This is Index Page!</h1>
+
+   <a href="contact/">Contact</a>
+   |
+   <a href="about/">About</a>
+
+
+
+   <table class="container">
+    <tr>
+      <th>S.no</th>
+      <th>name</th>
+      <th>age</th>
+      <th>can vote</th>
+    </tr>
+    {% for p in people %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.age}}</td>   
+      <td>
+        {%if p.age >= 18%}
+        👍
+        {%else%}
+        👎
+        {%endif%}
+      </td>   
+    </tr>
+    {% endfor%}
+
+  </table>
+{% endblock %}
