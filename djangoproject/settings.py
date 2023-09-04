@@ -37,14 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'home',
-=======
 ]
+
 
 EXTERNAL_APPS = [
     'Home',
->>>>>>> 27b0746 (added index.html in home app)
     'accounts'
 ]
 
