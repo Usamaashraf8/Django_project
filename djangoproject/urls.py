@@ -16,7 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+<<<<<<< HEAD
+from home.views import *
 urlpatterns = [
+
+    path('', home , name='home'),
+    path('about/', about , name='about'),
+    path('contact/', contact , name='contact'),
+=======
+from Home.views import *
+urlpatterns = [
+
+    path('', home , name='home'),
+>>>>>>> 27b0746 (added index.html in home app)
+
+
+    path('success_page', success_page , name='success_page'),
+
+
+
     path('admin/', admin.site.urls),
 ]
