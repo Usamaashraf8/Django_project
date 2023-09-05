@@ -1,3 +1,7 @@
 RUN THE APP:
     
     python manage.py runserver
+
+MIGRATION:
+
+    python manage.py makemigrations
